@@ -20,8 +20,6 @@ public class SubjectServiceImpl implements SubjectService {
 
     @Override
     public Subject save(Subject subject) {
-        subject.setStatus(Status.ACTIVE);
-
         Subject subjectNew = subjectRepository.save(subject);
 
         log.info("IN SubjectServiceImpl save {}", subjectNew);

@@ -20,7 +20,7 @@ public class Mark extends BaseEntity{
     private int mark;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "status")
+    @Column(name = "status", columnDefinition = "default 'ACTIVE'")
     private Status status;
 
     @ManyToOne(fetch = FetchType.LAZY)

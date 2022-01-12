@@ -21,8 +21,6 @@ public class MarkServiceImpl implements MarkService {
 
     @Override
     public Mark save(Mark mark) {
-        mark.setStatus(Status.ACTIVE);
-
         Mark markNew = markRepository.save(mark);
 
         log.info("IN MarkServiceImpl save {}", markNew);
